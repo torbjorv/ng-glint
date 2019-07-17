@@ -11,15 +11,15 @@ echo checkout $BRANCH
 mkdir $BRANCH_DIR
 cd $BRANCH_DIR
 
-git config --global user.name "CircleCI" 
-git init
-git remote add --fetch origin https://$TOKEN@github.com/torbjorv/ng-glint.git
+git config --global user.name "CircleCI"  > /dev/null 2>&1
+git init > /dev/null 2>&1
+git remote add --fetch origin https://$TOKEN@github.com/torbjorv/ng-glint.git > /dev/null 2>&1
 
-git checkout $BRANCH
+git checkout $BRANCH > /dev/null 2>&1
 
 rm -rf *
 # Revert the deletion of this one, we wanna keep it
-git checkout -- README.md
+git checkout -- README.md > /dev/null 2>&1
 
 # Copy angular app in here
 echo copy app
@@ -31,8 +31,8 @@ git add -A
 
 echo commit and push
 # need 'ci skip' to ignore this branch in CircleCI
-git commit --allow-empty -m "Deploy to branch '$BRANCH' [ci skip]"
-git push --force --quiet origin $BRANCH
+git commit --allow-empty -m "Deploy to branch '$BRANCH' [ci skip]" > /dev/null 2>&1
+git push --force --quiet origin $BRANCH > /dev/null 2>&1
 
 echo cleanup
 cd ..
