@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShinyFrameComponent } from './shiny-frame.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ShinyFrameComponent', () => {
   let component: ShinyFrameComponent;
@@ -8,6 +9,7 @@ describe('ShinyFrameComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [NoopAnimationsModule],
       declarations: [ ShinyFrameComponent ]
     })
     .compileComponents();
