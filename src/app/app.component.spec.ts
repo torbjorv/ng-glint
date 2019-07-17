@@ -19,10 +19,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'directive-experiment'`, () => {
+  it(`should have as title 'ng-glint'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('directive-experiment');
+    expect(app.title).toEqual('ng-glint');
   });
 
 });

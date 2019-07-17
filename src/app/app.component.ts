@@ -7,7 +7,7 @@ import { ShinyFrameComponent } from './shiny-frame/shiny-frame.component';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'directive-experiment';
+  title = 'ng-glint';
 
   @ViewChild('shiny', { static: false })
   private _shiny: ShinyFrameComponent;
